@@ -77,8 +77,43 @@ form {
     color: red;
   }
 }
-
-
+.navbar-nav.bg-gradient-primary.accordion.list-group {
+  border-radius: unset;
+}
+.navbar-nav{
+  .nav-item.list-group-item {
+    background: unset;
+    border: unset;
+  }
+  a.nav-link.group-nav { 
+    svg.c-close, svg.open {
+      float: right;
+      margin: 5px;
+    }
+    svg.open {
+      display: none;
+    }
+  }
+  a.nav-link.group-nav.collapsed{
+    svg.c-close {
+      display: none;
+    }
+    svg.open {
+      display: block;
+    }
+  }
+}
+.dashboard-nav-top{
+  .navbar-search{
+    input[aria-label="search"] {
+      width: 89%;
+    }
+  }
+  .error{
+    font-size: 12px;
+    position: absolute;
+  }
+}
 @media screen and (max-width: 1024px){
   .con-login{
     .con-logo-img{

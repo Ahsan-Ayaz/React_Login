@@ -1,6 +1,7 @@
 //import logo from './logo.svg';
 import React from 'react';
 import './App.scss';
+import './css/sb-admin-2.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CustomScript.js';
 //import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -9,6 +10,7 @@ import PrivateRoute from './components/PrivateRoute';
 import LoginScreen from './components/LoginScreen'
 import MainPage from './components/MainPage';
 import ContactUs from './components/ContactUs';
+import Dashboard from './components/Dashboard';
 
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
           </Route>
           <Route exact path='/login' element={<LoginScreen />} />
           <Route exact path="/contact" element={<ContactUs />} />
+          <Route exact path='/dashboard' element={<Dashboard />} />
         </Routes>
         </Router>
   );
