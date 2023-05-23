@@ -113,6 +113,12 @@ form {
     font-size: 12px;
     position: absolute;
   }
+  .navbar-nav{
+      align-items: center;
+    }
+}
+.progress.progress-sm {
+  height: 0.5rem;
 }
 @media screen and (max-width: 1024px){
   .con-login{
