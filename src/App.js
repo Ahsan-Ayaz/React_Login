@@ -11,6 +11,7 @@ import LoginScreen from './components/LoginScreen'
 import MainPage from './components/MainPage';
 import ContactUs from './components/ContactUs';
 import Dashboard from './components/Dashboard';
+import Page404 from './components/pages/Page404';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route exact path='/login' element={<LoginScreen />} />
           <Route exact path="/contact" element={<ContactUs />} />
           <Route exact path='/dashboard' element={<Dashboard />} />
+          <Route exact path='/page-not-found' element={<Page404 />} />
         </Routes>
         </Router>
   );

@@ -14,8 +14,8 @@ const RevenuePieChart = () => {
       <PieChart width={280} height={280}>
         <Pie
           data={data}
-          cx={160}
-          cy={130}
+          cx="50%"
+          cy="50%"
           innerRadius={90}
           outerRadius={110}
           fill="#8884d8"

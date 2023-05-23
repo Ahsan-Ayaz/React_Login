@@ -1,5 +1,6 @@
 import React from 'react'
 import SideBar from './SideBar'
+import NavBarTop from './NavBarTop';
 import MainContent from './MainContent'
 
 const Dashboard = () => {
@@ -7,7 +8,13 @@ const Dashboard = () => {
     <>
     <div id="wrapper">
         <SideBar />
-        <MainContent />
+        <div id="content-wrapper" className="d-flex flex-column">
+        <div id='content'>
+            <NavBarTop />
+            <MainContent />
+        </div>
+        </div>
+        
     </div>
     </>
   )

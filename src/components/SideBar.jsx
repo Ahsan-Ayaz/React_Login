@@ -20,20 +20,20 @@ const SideBar = () => {
         {url: '/', title: 'Login'},
         {url: '/', title: 'Register'},
         {url: '/', title: 'Forgot Password'},
-        {url: '/', title: '404 Page'},
+        {url: '/page-not-found', title: '404 Page'},
         {url: '/', title: 'Blank Page'},
     ];
   return (
     <>
     <ListGroup as="ul" className='navbar-nav bg-gradient-primary sidebar sidebar-dark accordion' id='accordionSidebar'>
-      <Link to={`/dashboard`} className="sidebar-brand d-flex align-items-center justify-content-center">
+      <Link to='/dashboard' className="sidebar-brand d-flex align-items-center justify-content-center">
         <div className="sidebar-brand-icon rotate-n-15">
             <EmojiLaughing />
         </div>
         <div className="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
       </Link>
       <hr className="sidebar-divider my-0" />
-      <SingleLI name="Dashboard" link="/" icon={Speedometer} />
+      <SingleLI name="Dashboard" link="/dashboard" icon={Speedometer} />
       <hr className="sidebar-divider my-0" />
       <div className="sidebar-heading">
         Interface
