@@ -65,6 +65,13 @@ const AreaLineChart = () => {
         amt: 40000,
         },
       ];
+
+  const customYAxisTicks = [0, 10000, 20000, 30000, 40000]; // Custom tick values
+
+  const formatYAxisTick = (value) => {
+    return `$${value}`; // Add dollar sign before the value
+  };
+
   return (
     <ResponsiveContainer width="100%" height={300}>
       <AreaChart
@@ -76,9 +83,9 @@ const AreaLineChart = () => {
           bottom: 5,
         }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
+        <CartesianGrid vertical={false} strokeDasharray="1 1" />
+        <XAxis dataKey="name" interval={1} axisLine={false} />
+        <YAxis ticks={customYAxisTicks} tickFormatter={formatYAxisTick} axisLine={false} />
         <Tooltip />
         <Legend />
         <Area type="monotone" dataKey="Earnings" stroke="#4e73df" fill="#f6f8fd" />

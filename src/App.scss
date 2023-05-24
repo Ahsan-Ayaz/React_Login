@@ -120,6 +120,29 @@ form {
 .progress.progress-sm {
   height: 0.5rem;
 }
+.third-party-signup{
+  .btn-user{
+    color: #fff;
+    border-color: #fff;
+    border-radius: 50px;
+  }
+  .btn-user:hover{
+    color: #fff;
+    border-color: #fff;
+  }
+  .btn-google{
+    background-color: #ea4335;
+  }
+  .btn-google:hover{
+    background-color: #e12717;
+  }
+  .btn-facebook{
+    background-color: #3b5998;
+  }
+  .btn-facebook:hover{
+    background-color: #30497c;
+  }
+}
 @media screen and (max-width: 1024px){
   .con-login{
     .con-logo-img{
