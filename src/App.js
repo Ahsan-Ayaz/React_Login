@@ -13,6 +13,7 @@ import ContactUs from './components/ContactUs';
 import Dashboard from './components/Dashboard';
 import Page404 from './components/pages/Page404';
 import CreateAccount from './components/pages/CreateAccount';
+import TablePage from './components/pages/TablePage';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route exact path='/dashboard' element={<Dashboard />} />
           <Route exact path='/page-not-found' element={<Page404 />} />
           <Route exact path='/create-account' element={<CreateAccount />} />
+          <Route exact path='/tables' element={<TablePage />} />
         </Routes>
         </Router>
   );

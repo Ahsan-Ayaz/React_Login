@@ -2,6 +2,7 @@ import React from 'react'
 import SideBar from './SideBar'
 import NavBarTop from './NavBarTop';
 import MainContent from './MainContent'
+import Footer from './Footer';
 
 const Dashboard = () => {
   return (
@@ -13,6 +14,7 @@ const Dashboard = () => {
             <NavBarTop />
             <MainContent />
         </div>
+        <Footer />
         </div>
         
     </div>

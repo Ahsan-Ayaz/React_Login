@@ -1,6 +1,7 @@
 import React from 'react'
 import SideBar from '../SideBar'
 import NavBarTop from '../NavBarTop'
+import Footer from '../Footer'
 import { Link } from 'react-router-dom'
 
 const Page404 = () => {
@@ -19,6 +20,7 @@ const Page404 = () => {
                 </div>
             </div>
         </div>
+        <Footer />
         </div>
         
     </div>

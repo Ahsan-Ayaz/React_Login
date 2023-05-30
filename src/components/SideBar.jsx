@@ -46,7 +46,7 @@ const SideBar = () => {
       </div>
       <SingleLISubMenu name="Pages" link="/" icon={Folder} data_tar="collapsePages" sub_title="All Pages" sub_menu={subItems3} />
       <SingleLI name="Charts" link="/" icon={BarChart} />
-      <SingleLI name="Tables" link="/" icon={Table} />
+      <SingleLI name="Tables" link="/tables" icon={Table} />
       <hr className="sidebar-divider my-0" />
     </ListGroup>
     </>

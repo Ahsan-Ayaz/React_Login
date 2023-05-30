@@ -106,7 +106,7 @@ const CreateAccount = () => {
                                 <a className="small" href="forgot-password.html">Forgot Password?</a>
                             </div>
                             <div className="text-center">
-                                <a className="small" href="login.html">Already have an account? Login!</a>
+                                <a className="small" href="login.html">Already have an account? Login! 😃</a>
                             </div>
                         </div>
                     </div>

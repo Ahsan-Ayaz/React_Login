@@ -143,6 +143,9 @@ form {
     background-color: #30497c;
   }
 }
+ul.pagination {
+  justify-content: flex-end;
+}
 @media screen and (max-width: 1024px){
   .con-login{
     .con-logo-img{
