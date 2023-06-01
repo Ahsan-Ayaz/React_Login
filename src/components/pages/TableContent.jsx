@@ -4,16 +4,24 @@ import Table from 'react-bootstrap/Table';
 import { FiletypeCsv } from 'react-bootstrap-icons';
 import { CSVLink } from 'react-csv';
 import PaginationTable from '../sections/PaginationTable';
+import TableSkeleton from '../skelitons/TableSkeleton';
 
 const ApiUrl = "https://dummyjson.com/users";
 
 const TableContent = () => {
     const [limit, setlimit] = useState(10);
+    const [skipEntries, setskipEntries] = useState(0);
     const handleLimitChange = (event) => {
         setlimit(event.target.value);
+        setskipEntries(0);
       };
     const [users, setUsers] = useState([]);
-    var apiUrlLimit = `https://dummyjson.com/users?limit=${limit}`;
+    
+    const updateLimit = (data) => {
+        setskipEntries(data);
+    }
+
+    var apiUrlLimit = `${ApiUrl}?limit=${limit}&skip=${skipEntries}`;
     //console.log(apiUrl);
     useEffect(() => {
         fetch(apiUrlLimit) // Replace with your API endpoint
@@ -22,7 +30,7 @@ const TableContent = () => {
             setUsers(data.users);
         })
           .catch(error => console.log(error));
-      }, [limit]);
+      }, [limit, skipEntries]);
 
   return (
     <div className='table-responsive'>
@@ -55,6 +63,7 @@ const TableContent = () => {
             </div>
             </div>
             <div className='row m-0'>
+            {users ? (
             <Table id="myTable" className="display">
                 <thead>
                     <tr>
@@ -78,8 +87,11 @@ const TableContent = () => {
                     ))}
                 </tbody>
             </Table>
+            ) : (
+                <TableSkeleton />
+              )}
             </div>
-            <PaginationTable />
+            <PaginationTable api={ApiUrl} pageLimit={limit} updateLimit={updateLimit} />
         </div>
     </div>
   )
